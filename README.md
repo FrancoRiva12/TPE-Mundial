@@ -3,7 +3,7 @@
 🌎 Mundial 2026 – Modelo de Datos
 👥 Integrantes
 Nombre Apellido – email@ejemplo.com
-Nombre Apellido – email@ejemplo.com
+Federico Rio – fedeerp01@gmail.com
 📌 Temática
 
 Sistema web informativo sobre el Mundial de Fútbol 2026.
