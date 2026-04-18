@@ -15,15 +15,21 @@ Este proyecto consiste en el diseño de una base de datos para un sitio web din�
 El sistema permite:
 
 Visualizar selecciones participantes
+
 Consultar los grupos del torneo
+
 Ver los partidos programados y sus resultados
+
 Identificar en qué estadio se juega cada partido
+
 🗂️ Modelo de Datos
+
 Entidades principales:
 Grupo
 Selección
 Partido
 Estadio
+
 Relaciones:
 Una selección pertenece a un grupo
 Un grupo contiene varias selecciones
