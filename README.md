@@ -1,38 +1,67 @@
-# TPE-Mundial
+# 🌎 Mundial 2026 – Modelo de Datos
 
-🌎 Mundial 2026 – Modelo de Datos
-👥 Integrantes
-Franco Riva – francoriva72@gmail.com
-Federico Rio – fedeerp01@gmail.com
-📌 Temática
+## 👥 Integrantes
+
+* Franco Riva – [francoriva72@gmail.com](mailto:francoriva72@gmail.com)
+* Federico Rio – [fedeerp01@gmail.com](mailto:fedeerp01@gmail.com)
+
+---
+
+## 📌 Temática
 
 Sistema web informativo sobre el Mundial de Fútbol 2026.
 
-📝 Descripción
+---
 
-Este proyecto consiste en el diseño de una base de datos para un sitio web dinámico que permite consultar información sobre el Mundial 2026.
+## 📝 Descripción
+
+Este proyecto consiste en el diseño de una base de datos para un sitio web dinámico (Server Side Rendering) que permite consultar y administrar información relacionada con el Mundial de Fútbol 2026.
 
 El sistema permite:
 
-Visualizar selecciones participantes
+* Visualizar las selecciones participantes
+* Consultar los grupos del torneo
+* Ver los partidos programados
+* Registrar y visualizar resultados
+* Identificar el estadio donde se juega cada partido
 
-Consultar los grupos del torneo
+---
 
-Ver los partidos programados y sus resultados
+## 🗂️ Modelo de Datos
 
-Identificar en qué estadio se juega cada partido
+### Entidades principales
 
-🗂️ Modelo de Datos
+* **Grupo**
+* **Selección**
+* **Partido**
+* **Estadio**
 
-Entidades principales:
-Grupo
-Selección
-Partido
-Estadio
+---
 
-Relaciones:
-Una selección pertenece a un grupo
-Un grupo contiene varias selecciones
-Un partido enfrenta a dos selecciones
-Un partido se juega en un estadio
-Un estadio puede tener varios partidos
+### Relaciones
+
+* Un **grupo** contiene muchas **selecciones** (relación 1 a N)
+* Una **selección** pertenece a un único **grupo**
+* Un **partido** enfrenta a dos **selecciones** (local y visitante)
+* Un **partido** se juega en un único **estadio**
+* Un **estadio** puede albergar muchos **partidos** (relación 1 a N)
+
+---
+
+### 🔑 Claves
+
+* Cada entidad posee una **clave primaria** (`id`)
+* Las relaciones se implementan mediante **claves foráneas**:
+
+  * `seleccion.id_grupo → grupo.id_grupo`
+  * `partido.id_estadio → estadio.id_estadio`
+  * `partido.id_local → seleccion.id_seleccion`
+  * `partido.id_visitante → seleccion.id_seleccion`
+
+---
+
+## 📊 Diagrama Entidad-Relación (DER)
+
+
+
+---
