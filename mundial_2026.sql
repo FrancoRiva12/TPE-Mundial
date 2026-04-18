@@ -56,9 +56,7 @@ CREATE TABLE `partido` (
   `fecha` datetime NOT NULL,
   `id_estadio` int(11) DEFAULT NULL,
   `id_local` int(11) DEFAULT NULL,
-  `id_visitante` int(11) DEFAULT NULL,
-  `goles_local` int(11) DEFAULT 0,
-  `goles_visitante` int(11) DEFAULT 0
+  `id_visitante` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -69,7 +67,6 @@ CREATE TABLE `partido` (
 
 CREATE TABLE `seleccion` (
   `id_seleccion` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
   `pais` varchar(100) NOT NULL,
   `id_grupo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
