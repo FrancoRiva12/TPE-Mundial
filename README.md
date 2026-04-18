@@ -1,4 +1,4 @@
-🌎 Mundial 2026 – Modelo de Datos
+# **🌎 Mundial 2026**
 
 👥 Integrantes
 Franco Riva – francoriva72@gmail.com -
