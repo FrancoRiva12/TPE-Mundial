@@ -1,7 +1,7 @@
 🌎 Mundial 2026 – Modelo de Datos
 
 👥 Integrantes
-Franco Riva – francoriva72@gmail.com
+Franco Riva – francoriva72@gmail.com -
 Federico Rio – fedeerp01@gmail.com
 
 📌 Temática
