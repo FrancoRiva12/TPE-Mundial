@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-04-2026 a las 14:38:10
+-- Tiempo de generación: 18-04-2026 a las 17:40:53
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -42,7 +42,7 @@ CREATE TABLE `estadio` (
 
 CREATE TABLE `grupo` (
   `id_grupo` int(11) NOT NULL,
-  `nombre` char(1) NOT NULL
+  `seleccion` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -69,6 +69,19 @@ CREATE TABLE `seleccion` (
   `id_seleccion` int(11) NOT NULL,
   `pais` varchar(100) NOT NULL,
   `id_grupo` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id_usuario` int(11) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `rol` enum('admin','visitante') DEFAULT 'visitante'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -104,6 +117,13 @@ ALTER TABLE `seleccion`
   ADD KEY `id_grupo` (`id_grupo`);
 
 --
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -130,6 +150,12 @@ ALTER TABLE `partido`
 --
 ALTER TABLE `seleccion`
   MODIFY `id_seleccion` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
